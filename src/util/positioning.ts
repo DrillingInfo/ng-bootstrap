@@ -131,6 +131,15 @@ export class Positioning {
       case 'center':
         if (placementPrimary === 'top' || placementPrimary === 'bottom') {
           targetElPosition.left = hostElPosition.left + hostElPosition.width / 2 - targetElement.offsetWidth / 2;
+          //DI: do not allow popover to spill over the extreme left or right of the entire page
+          if(appendToBody) {
+            if(targetElPosition.left < 0) {
+              targetElPosition.left = 2;
+            }
+            if(targetElPosition.left + targetElPosition.width > window.innerWidth) {
+              targetElPosition.left = window.innerWidth - targetElPosition.width - 22;
+            }
+          }
         } else {
           targetElPosition.top = hostElPosition.top + hostElPosition.height / 2 - targetElement.offsetHeight / 2;
         }
