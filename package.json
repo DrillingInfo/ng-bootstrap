@@ -46,11 +46,11 @@
   },
   "homepage": "https://github.com/ng-bootstrap/ng-bootstrap#readme",
   "dependencies": {
-    "@angular/core": "5.0.2",
-    "@angular/common": "5.0.2",
-    "@angular/forms": "5.0.2"
   },
   "devDependencies": {
+    "@angular/core": "5.0.2",
+    "@angular/common": "5.0.2",
+    "@angular/forms": "5.0.2",
     "@angular/compiler": "5.0.2",
     "@angular/compiler-cli": "5.0.2",
     "@angular/http": "5.0.2",
